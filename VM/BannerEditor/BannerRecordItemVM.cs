@@ -40,7 +40,7 @@ namespace BannerReload.VM.Banner
         {
             string code = item.BannerCode;
             //BannerCode bannerCode = new BannerCode();
-            var bannerCode = BannerCode.CreateFrom(code);
+            BannerCode bannerCode = TaleWorlds.Core.BannerCode.CreateFrom(new TaleWorlds.Core.Banner(code));
 
             return bannerCode;
         }

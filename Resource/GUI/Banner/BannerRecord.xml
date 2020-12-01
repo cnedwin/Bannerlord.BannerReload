@@ -6,13 +6,13 @@
           <Children>
             
             
-            <ToggleWidget DoNotPassEventsToChildren="true" WidthSizePolicy="StretchToParent" MarginTop="8" HeightSizePolicy="Fixed" SuggestedHeight="40"  HorizontalAlignment="Left" VerticalAlignment="Top"  RenderLate="true" WidgetToClose="..\BannerList">
+            <ToggleWidget DoNotPassEventsToChildren="true" WidthSizePolicy="StretchToParent" MarginTop="8" HeightSizePolicy="Fixed" SuggestedHeight="40"  HorizontalAlignment="Left" VerticalAlignment="Top"  RenderLate="true" WidgetToClose="..\CompanionsList">
               <Children>
                 <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Brush="Clan.Management.Collapser.Text" Text="@SavedListText" />
               </Children>
             </ToggleWidget>
 
-            <ListPanel Id="BannerList" IsVisible="false"  WidthSizePolicy="Fixed"   MarginTop="8"  MarginRight="8"  MarginLeft="8"  MarginBottom="8"  SuggestedWidth="200" HeightSizePolicy="StretchToParent"  HorizontalAlignment="Left" LayoutImp.LayoutMethod="VerticalBottomToTop" DoNotAcceptEvents="true"  RenderLate="true" >
+            <ListPanel Id="CompanionsList" IsVisible="false"  WidthSizePolicy="Fixed"   MarginTop="8"  MarginRight="8"  MarginLeft="8"  MarginBottom="8"  SuggestedWidth="200" HeightSizePolicy="StretchToParent"  HorizontalAlignment="Left" LayoutImp.LayoutMethod="VerticalBottomToTop" DoNotAcceptEvents="true"  RenderLate="true" >
               <Children>
 
 

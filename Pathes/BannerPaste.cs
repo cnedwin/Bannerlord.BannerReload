@@ -21,24 +21,28 @@ namespace BannerReload.Pathes
 				{
 					Input.SetClipboardText(__instance.DataSource.BannerVM.Banner.Serialize());
 				}
-				catch (Exception ex)
+				catch (Exception ex2)
 				{
+					//Log.write("Error copying banner code");
 					InformationManager.DisplayMessage(new InformationMessage("Error copying banner code", new Color(1f, 0f, 0f)));
+					//Log.write(ex2);
 				}
 			}
 			else if (__instance.SceneLayer.Input.IsHotKeyPressed("Paste") || __instance.GauntletLayer.Input.IsHotKeyPressed("Paste"))
 			{
 				try
 				{
-					string clipboardText = Input.GetClipboardText();
-					Banner banner = new Banner(clipboardText);
+					string bannerCode = Input.GetClipboardText();
+					Banner banner = new Banner(bannerCode);
 					banner.ConvertToMultiMesh();
-					__instance.DataSource.BannerVM.BannerCode = clipboardText;
+					__instance.DataSource.BannerVM.BannerCode = bannerCode;
 					Traverse.Create(__instance).Method("RefreshShieldAndCharacter").GetValue();
 				}
-				catch (Exception ex2)
+				catch (Exception ex)
 				{
+					//Log.write("Error deserializing banner code");
 					InformationManager.DisplayMessage(new InformationMessage("Error pasting banner code", new Color(1f, 0f, 0f)));
+					//Log.write(ex);
 				}
 			}
 		}

@@ -2,20 +2,16 @@
 using BannerReload.Data;
 using BannerReload.VM.Banner;
 using HarmonyLib;
-using SandBox.GauntletUI;
 using System;
 using TaleWorlds.Core;
 using TaleWorlds.Core.ViewModelCollection;
+using TaleWorlds.Engine.GauntletUI;
+using TaleWorlds.GauntletUI;
+using TaleWorlds.GauntletUI.Data;
 using TaleWorlds.Library;
 using TaleWorlds.Localization;
-using TaleWorlds.MountAndBlade;
-using TaleWorlds.MountAndBlade.View;
+using SandBox.GauntletUI;
 using TaleWorlds.TwoDimension;
-using TaleWorlds.Engine.GauntletUI;
-using TaleWorlds.GauntletUI.Data;
-using TaleWorlds.GauntletUI;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace BannerReload.Pathes
 {
@@ -49,6 +45,7 @@ namespace BannerReload.Pathes
 
             BannerRecordVM bannerRecord = new BannerRecordVM(__instance, GlobalDataProvider.Instance.BannerRecordData());
             GauntletMovie movie = __instance.GauntletLayer.LoadMovie("BannerRecord", bannerRecord);
+
         }
     }
 
